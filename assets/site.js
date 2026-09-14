@@ -20,24 +20,6 @@
     syncHeader();
   });
 
-  /* parallax hero layers */
-  Array.prototype.forEach.call(document.querySelectorAll('[data-parallax="stage"]'), function (stage) {
-    var layer = stage.querySelector('[data-parallax="layer"]');
-    if (!layer) return;
-    var raf = 0;
-    function apply() {
-      raf = 0;
-      var r = stage.getBoundingClientRect();
-      var travel = Math.max(0, stage.offsetHeight - (window.innerHeight || 800));
-      var y = Math.min(Math.max(-r.top, 0), travel);
-      layer.style.transform = 'translate3d(0,' + (reduce ? 0 : y) + 'px,0)';
-    }
-    function tick() { if (!raf) raf = requestAnimationFrame(apply); }
-    window.addEventListener('scroll', tick, { passive: true });
-    window.addEventListener('resize', tick);
-    apply();
-  });
-
   /* click-to-play video: the poster is replaced by the embed, so nothing third-party loads first */
   Array.prototype.forEach.call(document.querySelectorAll('[data-video]'), function (poster) {
     poster.addEventListener('click', function () {
