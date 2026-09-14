@@ -1,2 +1,38 @@
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: Slackbot-LinkExpanding
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: SkypeUriPreview
+Allow: /
+
+User-agent: iMessageBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
 User-agent: *
 Disallow: /
