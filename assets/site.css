@@ -85,6 +85,26 @@
     [data-cellgrid] > :nth-child(20n+18) { animation-range: entry 33.2% entry 84.4%; }
     [data-cellgrid] > :nth-child(20n+19) { animation-range: entry 34.8% entry 85.6%; }
     [data-cellgrid] > :nth-child(20n+20) { animation-range: entry 36.400000000000006% entry 86.8%; }
+    [data-progblock] {
+      animation: dwRise 1s linear both;
+      animation-timeline: view();
+      animation-range: entry 6% entry 64%;
+    }
+    [data-progblock]:nth-child(1) { animation-range: entry 6.0% entry 64.0%; }
+    [data-progblock]:nth-child(2) { animation-range: entry 7.6% entry 65.6%; }
+    [data-progblock]:nth-child(3) { animation-range: entry 9.2% entry 67.2%; }
+    [data-progblock]:nth-child(4) { animation-range: entry 10.8% entry 68.8%; }
+    [data-progblock]:nth-child(5) { animation-range: entry 12.4% entry 70.4%; }
+    [data-progblock]:nth-child(6) { animation-range: entry 14.0% entry 72.0%; }
+    [data-progblock]:nth-child(7) { animation-range: entry 15.6% entry 73.6%; }
+    [data-progblock]:nth-child(8) { animation-range: entry 17.2% entry 75.2%; }
+    [data-progblock]:nth-child(9) { animation-range: entry 18.8% entry 76.8%; }
+    [data-progblock]:nth-child(10) { animation-range: entry 20.4% entry 78.4%; }
+    [data-progblock]:nth-child(11) { animation-range: entry 22.0% entry 80.0%; }
+    [data-progblock]:nth-child(12) { animation-range: entry 23.6% entry 81.6%; }
+    [data-progblock]:nth-child(13) { animation-range: entry 25.2% entry 83.2%; }
+    [data-progblock]:nth-child(14) { animation-range: entry 26.8% entry 84.8%; }
+    [data-progblock]:nth-child(15) { animation-range: entry 28.4% entry 86.4%; }
   }
   @supports (animation-timeline: view()) {
     main > section:not([data-screen-label="Home cover parallax"]):not([data-screen-label="Home work tiles"]) p,
