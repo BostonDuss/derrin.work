@@ -157,5 +157,7 @@
 .xa:hover { color:#C9A96A !important; }
 .xb:focus { outline:2px solid #C9A96A !important; outline-offset:6px !important; }
 .xc:hover { border-color:#C9A96A !important; color:#C9A96A !important; }
-.xd:hover { color:#A79BC8 !important; }
-.xe:focus { outline:2px solid #A79BC8 !important; outline-offset:6px !important; }
+.xd:hover { color:#7A5A1E !important; }
+.xe:focus { outline:2px solid #C9A96A !important; outline-offset:4px !important; }
+.xf:hover { color:#A79BC8 !important; }
+.xg:focus { outline:2px solid #A79BC8 !important; outline-offset:6px !important; }
