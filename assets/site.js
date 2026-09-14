@@ -1,8 +1,6 @@
 /* derrin.work — the only runtime behaviour the static site needs. */
 (function () {
   'use strict';
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   /* header height reserved by a spacer, so fixed chrome never covers content */
   var header = document.getElementById('siteheader'), spacer = document.getElementById('headerspacer');
   function syncHeader() { if (header && spacer) spacer.style.height = header.offsetHeight + 'px'; }

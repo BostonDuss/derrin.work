@@ -50,7 +50,7 @@ Copy lives directly in the HTML. Styling is inline on elements, matching the des
 
 ## Known items
 
-- **Press photos.** Two images on the Good Ideas Shop page are hot-linked from geekwire.com. They should be downloaded, placed in `images/`, and the `src` updated, with permission from GeekWire. A third from myballard.com was removed because the source URL no longer resolves.
+- **Press photos — permission outstanding.** The three press images on the Good Ideas Shop page (`images/press-geekwire-*.jpeg`) are GeekWire's copyrighted photographs, credited to GeekWire Photo / Kurt Schlosser. They are now self-hosted and committed to this repository, meaning they are redistributed from our own domain rather than embedded from theirs. Written permission from GeekWire's reprints desk (linked in the article footer) should be confirmed. If it is declined, either revert to hot-linking their URLs or remove the cards.
 - **Page weight.** The design system migration page is large (~440KB of HTML) because the scale diagram is thousands of real elements. It gzips to a fraction of that; most hosts including Pages compress automatically.
 - **Images are uncompressed.** Running them through Squoosh or `cwebp` would cut total page weight substantially with no visible loss.
 - **Scroll animations** use CSS `animation-timeline: view()`. Browsers without support (Safari before 26) show all content, just without the entrance motion. Nothing is hidden.
