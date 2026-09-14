@@ -163,6 +163,7 @@
 #mobilemenu .btn { font-size: 16px; padding: 14px 16px; margin-top: 16px; text-align: center; border-bottom: 0; color: #000000; }
 @media (max-width: 719px) { .nav-wide { display: none; } .nav-narrow { display: block; } }
 @media (max-width: 719px) { [data-herocopy] { padding-bottom: 76px !important; } }
+@media (max-width: 719px) { [data-tile-meta] [data-hl-extra] { display: none; } }
 @media print { #siteheader, #headerspacer { display: none; } }
 
 .x0:hover { border-color:#7FC0B6 !important; }
