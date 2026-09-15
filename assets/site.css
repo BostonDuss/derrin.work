@@ -137,6 +137,8 @@
   @media (prefers-reduced-motion: reduce) {
     main * { animation: none !important; }
   }
+  @media (max-width: 719px) { [data-herocopy] { padding-bottom: 76px !important; } }
+  @media (max-width: 719px) { [data-tile-meta] [data-hl-extra] { display: none; } }
 
 
 #siteheader { position: fixed; top: 0; left: 0; right: 0; z-index: 60; background: #000000; border-bottom: 1px solid #1c1c1c; }
@@ -162,24 +164,24 @@
 #mobilemenu a:hover { color: #7FC0B6; }
 #mobilemenu .btn { font-size: 16px; padding: 14px 16px; margin-top: 16px; text-align: center; border-bottom: 0; color: #000000; }
 @media (max-width: 719px) { .nav-wide { display: none; } .nav-narrow { display: block; } }
-@media (max-width: 719px) { [data-herocopy] { padding-bottom: 76px !important; } }
-@media (max-width: 719px) { [data-tile-meta] [data-hl-extra] { display: none; } }
 @media print { #siteheader, #headerspacer { display: none; } }
 
 .x0:hover { border-color:#7FC0B6 !important; }
-.x1:focus { outline:2px solid #1D5C57 !important; outline-offset:4px !important; }
-.x2:hover { background:#7FC0B6 !important; }
-.x3:focus { outline:2px solid #7FC0B6 !important; outline-offset:4px !important; }
-.x4:hover { color:#FFFFFF !important; }
-.x5:hover { color:#7FC0B6 !important; }
-.x6:focus { outline:2px solid #7FC0B6 !important; outline-offset:6px !important; }
-.x7:hover { color:#E8958A !important; }
-.x8:focus { outline:2px solid #E8958A !important; outline-offset:6px !important; }
-.x9:focus { outline:2px solid #E8958A !important; outline-offset:4px !important; }
-.xa:hover { color:#C9A96A !important; }
-.xb:focus { outline:2px solid #C9A96A !important; outline-offset:6px !important; }
-.xc:hover { border-color:#C9A96A !important; color:#C9A96A !important; }
-.xd:hover { color:#7A5A1E !important; }
-.xe:focus { outline:2px solid #C9A96A !important; outline-offset:4px !important; }
-.xf:hover { color:#A79BC8 !important; }
-.xg:focus { outline:2px solid #A79BC8 !important; outline-offset:6px !important; }
+.x1:hover { border-color:rgba(127,192,182,.6) !important; background:rgba(8,8,8,.6) !important; }
+.x2:focus { outline:2px solid #7FC0B6 !important; outline-offset:4px !important; }
+.x3:focus { outline:2px solid #1D5C57 !important; outline-offset:4px !important; }
+.x4:hover { background:#7FC0B6 !important; }
+.x5:hover { color:#FFFFFF !important; }
+.x6:hover { color:#7FC0B6 !important; }
+.x7:focus { outline:2px solid #7FC0B6 !important; outline-offset:6px !important; }
+.x8:hover { color:#E8958A !important; }
+.x9:focus { outline:2px solid #E8958A !important; outline-offset:6px !important; }
+.xa:focus { outline:2px solid #E8958A !important; outline-offset:4px !important; }
+.xb:hover { color:#C9A96A !important; }
+.xc:focus { outline:2px solid #C9A96A !important; outline-offset:6px !important; }
+.xd:hover { border-color:#C9A96A !important; color:#C9A96A !important; }
+.xe:hover { color:#7A5A1E !important; }
+.xf:focus { outline:2px solid #C9A96A !important; outline-offset:4px !important; }
+.xg:hover { color:#A79BC8 !important; }
+.xh:focus { outline:2px solid #A79BC8 !important; outline-offset:6px !important; }
+.xi:hover { opacity:.94 !important; }

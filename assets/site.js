@@ -35,6 +35,54 @@
     });
   });
 
+  /* click-to-play in a modal: the embed is created on open and destroyed on close, so audio stops */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-video-modal]'), function (poster) {
+    poster.addEventListener('click', function () {
+      var prev = document.activeElement;
+      var back = document.createElement('div');
+      back.setAttribute('role', 'dialog');
+      back.setAttribute('aria-modal', 'true');
+      back.setAttribute('aria-label', poster.getAttribute('data-video-title') || 'Video');
+      back.style.cssText = 'position:fixed; inset:0; z-index:90; background:rgba(0,0,0,.88); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); display:grid; place-items:center; padding:clamp(16px,4vw,56px);';
+      var inner = document.createElement('div');
+      inner.style.cssText = 'width:min(1200px,100%);';
+      var bar = document.createElement('div');
+      bar.style.cssText = 'display:flex; justify-content:flex-end; margin-bottom:12px;';
+      var close = document.createElement('button');
+      close.type = 'button';
+      close.setAttribute('aria-label', 'Close the video');
+      close.textContent = 'Close ✕';
+      close.style.cssText = "font-family:'Schibsted Grotesk',system-ui,sans-serif; font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:#FFFFFF; background:none; border:1px solid rgba(255,255,255,.34); padding:9px 16px; cursor:pointer;";
+      bar.appendChild(close);
+      var frame = document.createElement('div');
+      frame.style.cssText = 'position:relative; width:100%; aspect-ratio:16/9; background:#000000;';
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + poster.getAttribute('data-video-modal') + '?autoplay=1&cc_load_policy=1&rel=0&modestbranding=1';
+      f.title = poster.getAttribute('data-video-title') || 'Video';
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      f.allowFullscreen = true;
+      f.style.cssText = 'position:absolute; inset:0; width:100%; height:100%; border:0; display:block;';
+      frame.appendChild(f);
+      inner.appendChild(bar);
+      inner.appendChild(frame);
+      back.appendChild(inner);
+      function shut() {
+        document.removeEventListener('keydown', onKey);
+        document.documentElement.style.overflow = '';
+        if (back.parentNode) back.parentNode.removeChild(back);
+        if (prev && prev.focus) prev.focus();
+      }
+      function onKey(e) { if (e.key === 'Escape') shut(); }
+      back.addEventListener('click', function (e) { if (e.target === back || e.target === inner) shut(); });
+      close.addEventListener('click', shut);
+      document.addEventListener('keydown', onKey);
+      document.documentElement.style.overflow = 'hidden';
+      document.body.appendChild(back);
+      close.focus();
+    });
+  });
+
   /* lookbook: CSS shows the active frame, JS only moves the index */
   var stageEl = document.querySelector('[data-helm]:not([data-helmthumbs])');
   var thumbs = document.querySelector('[data-helmthumbs]');
